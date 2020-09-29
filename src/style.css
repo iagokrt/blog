@@ -61,7 +61,7 @@
   --color-heading: #e0ece4;
   --color-heading-title: #fff;
   --color-accent: #d1dce5;
-  --color-background: #931a25;
+  --color-background: #78111a;
 }
 
 /* HTML elements */
@@ -84,7 +84,7 @@ body {
   font-size: var(--fontSize-1);
   color: var(--color-text);
   background-color: var(--color-background);
-  background-image: url(/frames.svg);
+  background-image: url("../static/frames.svg");
 }
 
 footer {
