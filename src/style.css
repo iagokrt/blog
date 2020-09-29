@@ -353,4 +353,7 @@ article.notfound {
   ol {
     list-style-position: inside;
   }
+  body {
+    background-image: none;
+  }
 }
