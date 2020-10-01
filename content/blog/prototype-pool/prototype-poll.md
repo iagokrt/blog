@@ -8,7 +8,9 @@ H3LL0 W0RLD
 
 ---
 
-Para o post de hoje teremos bastante foco no contexto de **CyberSecurity**
+Para o post de hoje o foco é em **CyberSecurity**
+
+
 Então prepara um *cafézão do bão* e bora entender esse conceito aí chamado **Prototype Pollution** !
 
 ---

@@ -4,11 +4,7 @@ date: "2020-09-27T23:12:03.284Z"
 description: "Among us, Sindrome do impostor & Vale alimentação"
 ---
 
-Olá, esse post vai ser um pouco diferente, vou escrever mais do que digitar então pode ser que fique diferente dos demais...
-
-## Não sonegue forças para estudar
-
-Realmente feliz por ter conseguido um emprego, e aquela sensação de que ñ sou capaz parece ter ido embora, a gente sabe que a vida sempre vai nos desafiar mas estar sendo aceito pra fazer parte de uma grande empresa é um sinal de que existe certa resolução nas coisas que você diz, faz e é.
+## Practice
 
 Não ser tão difícil pensar que existem oportunidades deveria motivar mais as pessoas a focarem em seus objetivos, independente de quais sejam, nenhum(a) artista ~~phodastic~~ aprendeu aquilo tudo e demonstrou aquele conhecimento da melhor forma em apenas algumas semanas; São meses, anos, décadas de prática.
 
@@ -28,9 +24,37 @@ O papo é que, quando nós entramos no game ele abre uma pop-up com algumas mens
 
 - **A outra é que futuramente iriam possivelmente se comprometer a disponibilizar o código do game em comunidade open-source.** 
 
-O que vocês consideram disso? Manda uma Dm [Aqui no Twitter](https://twitter.com/iagokrt) se quiser conversar sobre o que vc pensa sobre a comunidade de game-dev!!
+- Tocando no assunto, existem distintas formas de software licenses, o que eu quero dizer com isso é que open-source licenses têm um diferente propósito comparado à SOFTWARE LIVRE. 
 
-Se deveria ser tudo open-source, ou sei lá, se não.
+**Questões como o que é a ideologia de software livre (free software) e comunidades open-source e seus distintos propósitos.** 
+
+Além de intrísicamente preservar os essential freedoms.
+
+> direito 0) 'The freedom to run the program as you wish, for any purpose' 
+
+> direito 1) Liberdade de estudar como funciona e mudá-lo a sua maneira, acesso ao source-code é a base para isso.
+
+- O código carregado através do navegador browser (chrome ou mozila, safari, edge, internet explorer) é minificado, que é uma forma de obfuscação.
+
+> direito 2) Liberdade de redistribuir cópias afim de ajudar outros.
+
+> direito 3) Liberdade de distribuir cópias da sua modificações fazendo isso dando chance para comunidade se beneficiar de suas contribuições e mudanças, e acesso ao código fonte é a base para isso.
+
+Nesse cenário então surgem as não permissivas e licenças permissivas. Essas licenças são definidas geralmente com base no modelo de negócio e em todo o âmbito de direito tecnológico e é um assunto sério em grandes empresas com o modelo atual. Algumas das licenças permissivas são MIT e Apache 2.0.
+
+---
+
+Existe agora a inversão para subverter os modelos de anos para cá, valorizando o software livre por conveniência para os 'system as a service' Saas.
+
+Para contratar bons desenvolvedores as empresas abriram parte do código fonte de algumas propriedades. O que eles fizeram é aderir ao modelo constituído, de compartilhamento de código menos crítico para a funcionalidade sistemica (ou tudo que é *commodity*) e aí com a força da agitação do software livre o open-source virou esse movimento pragmático em diferencial.
+
+>O open-source não é o mesmo que free software e é daora entender as diferenças
+
+---
+
+O que vocês consideram disso? Manda uma Dm [Aqui no Twitter](https://twitter.com/iagokrt) se quiser conversar sobre o que vc pensa sobre a essas parada q envolve tecnologia e direito e propriedade intelectual e modelos de negócio. 
+
+Se deveria ser tudo free software, ou sei lá, se não, se apenas open-source.
 
 ## Vale Alimentação
 
