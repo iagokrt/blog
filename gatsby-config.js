@@ -5,7 +5,7 @@ module.exports = {
       name: `Iago Carneiro`,
       summary: `I'm currently living and working in Florianópolis. I Love building creative interactive things.`,
     },
-    description: `JavaScript is love, GatsbyJS. From floripa with love @iagokrt`,
+    description: `From floripa with love @iagokrt Blog`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
       twitter: `iagokrt`,
