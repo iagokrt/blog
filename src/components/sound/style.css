@@ -1,0 +1,21 @@
+.wrapper {
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+  }
+.wrapper button {
+    color: #000111;
+    background: #fff;
+    border: none;
+    outline: none;
+    transition: all 0.1s linear;
+    height: 17px;
+}
+.wrapper button:hover {
+    transform: scale(1.02);
+}
+.wrapper button span {
+    text-transform: uppercase;
+    letter-spacing: 0.9rem;
+    color: #010101;
+}
