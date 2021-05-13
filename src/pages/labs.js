@@ -10,7 +10,7 @@ import {OrbitControls, MeshWobbleMaterial} from '@react-three/drei'
 import * as dat from 'dat.gui';
 
 import MusicPlayer from '../components/sound/MusicPlayer'
-import demo from '../../static/demo.mp3';
+// import demo from '../../static/demo.mp3';
 
 import vertex from '../shader/vertex.glsl';
 import fragment from '../shader/fragment.glsl';
