@@ -54,8 +54,9 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
+  --fontSize-opt: 22px;
   --color-primary: #fff;
-  --color-text: #ffffff;
+  --color-text: #ffffee;
   --color-text-light: #f1f1f1;
   --color-text-dark: #000111;
   --color-heading: #e0ece4;
@@ -63,6 +64,9 @@
   --color-accent: #d1dce5;
   --color-background: #320d1f;
   --color-background-darker: #320000;
+  --color-debug: red;
+  --color-dark-orange: darkorange;
+  /* --color-text: blue; */
 }
 
 /* HTML elements */
@@ -217,12 +221,18 @@ li > ul {
 blockquote {
   color: var(--color-text-light);
   margin-left: calc(-1 * var(--spacing-6));
-  margin-right: var(--spacing-8);
-  padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
-  border-left: var(--spacing-1) solid var(--color-primary);
+  margin-right: var(--spacing-6);
+  /* padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6); */
+  /*border-left: var(--spacing-1) solid var(--color-primary); */
   font-size: var(--fontSize-2);
   font-style: italic;
   margin-bottom: var(--spacing-8);
+  text-align: center;
+  background: #320d1f;
+  border-radius: 9px;
+  box-shadow: 1px 2px 10px darkorange;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 blockquote > :last-child {
@@ -325,14 +335,25 @@ a:focus {
   min-width: 50px;
   border-radius: 100%;
 }
-
+.blog-post p {
+  font-size: var(--fontSize-opt);
+}
 .blog-post header h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+}
+
+a {
+  color: var(--color-dark-orange)
+}
+/* block quote on blog post markdown */
+blockquote {
+
 }
 
 .blog-post header p {
   font-size: var(--fontSize-2);
   font-family: var(--font-heading);
+  color: var(--color-dark-orange);
 }
 
 .blog-post-nav ul {

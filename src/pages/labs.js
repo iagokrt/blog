@@ -7,7 +7,6 @@ import React  from "react"
 import {Canvas} from '@react-three/fiber'
 // import {FrontSide} from 'three'
 import {OrbitControls} from '@react-three/drei'
-import { SphericalHarmonics3 } from "three";
 // import * as dat from 'dat.gui';
 
 // import MusicPlayer from '../components/sound/MusicPlayer'
@@ -56,7 +55,7 @@ const LabsCanvas = () => {
 
   return (
         <div style={stylesheets} className="canvas-container">
-            <h1>laboratory</h1>
+            <h1>laboratory ⚗️</h1>
             <h4>
               This is an experimental area for webGL programs
             </h4>
