@@ -1,16 +1,13 @@
-import React  from "react"
+import React, { useRef }  from "react"
 // import { Link, graphql } from "gatsby"
 
 // import Layout from "../components/layout"
 // import SEO from "../components/seo"
 
-import {Canvas} from '@react-three/fiber'
-// import {FrontSide} from 'three'
-import {OrbitControls} from '@react-three/drei'
+import {Canvas, useThree, useFrame} from '@react-three/fiber'
+import {OrbitControls, MeshWobbleMaterial, PerspectiveCamera, useCamera} from '@react-three/drei'
+import { PointsMaterial, FrontSide, Vector3 } from "three";
 // import * as dat from 'dat.gui';
-
-// import MusicPlayer from '../components/sound/MusicPlayer'
-// import demo from '../../static/demo.mp3';
 
 // import vertex from '../shader/vertex.glsl';
 // import fragment from '../shader/fragment.glsl';
@@ -24,57 +21,60 @@ const stylesheets = {
   border: '5px solid green',
   textAlign: 'center'
 };
-/**
- * 
- * @returns art
- * <MeshWobbleMaterial factor={3} speed={0.5} metalness={0.12} roughness={1}  side={FrontSide} />
- */
 
+const overlay = {position: 'absolute'}
 
-// must set: uniforms
-// 
-// const uniforms = {
-//   time: { type: 'f', value: 0 },
-//   progress: { type: 'f', value: 0 },
-//   uDistortion: { type: 'f', value: 0 },
-//   t: {
-//     type: 't',
-//     value: new THREE.TextureLoader().load(t),
-//   },
-//   t1: {
-//     type: 't',
-//     value: new THREE.TextureLoader().load(t1),
-//   },
-//   resolution: { type: 'v4', value: new THREE.Vector4() },
-//   uvRate1: {
-//     value: new THREE.Vector2(1, 1),
-//   },
-// }
+const Topics = () => {
+  return (
+    <div style={overlay}>
+      <h1>laboratory ⚗️</h1>
+      <h4>This is an experimental area for webGL programs</h4>
+      <nav>
+        <ul>
+          <li><a href="/">Return</a></li>
+        </ul>
+      </nav>
+    </div>
+  )
+}
 
 const LabsCanvas = () => {
 
+  const Dolly = () => {
+    useFrame(state => {
+      state.camera.position.z = 2.2 + Math.sin(state.clock.getElapsedTime()) * 92
+      state.camera.updateProjectionMatrix()
+      // console.log('camera state:', state.camera)
+      state.camera.lookAt(new Vector3(2,2,-50))
+    })
+    console.log(state.camera)
+    return null
+  }
   return (
         <div style={stylesheets} className="canvas-container">
-            <h1>laboratory ⚗️</h1>
-            <h4>
-              This is an experimental area for webGL programs
-            </h4>
-            <nav>
-              <ul>
-                <li><a href="/">Return</a></li>
-              </ul>
-            </nav>
-            <Canvas>
+            <Topics />
+            <Canvas concurrent colorManagement>
+                <Dolly />
                 <ambientLight intensity={0.1} />
                 <directionalLight color="green" position={[0, 0, 5]} />
                 <directionalLight color="red" position={[0, 2, 0]} />
                 <directionalLight color="blue" position={[0, 0, -5]} />
 
-                <mesh>
-                  <planeBufferGeometry args={[5, 10, 15, 20]} />
-                  <meshNormalMaterial />
-                </mesh>
-                <OrbitControls />
+                <group>
+                  <mesh>
+                    <sphereBufferGeometry args={[210, 290, 95]} attach="geometry" />
+                    <MeshWobbleMaterial
+                      attach="material"
+                      side={FrontSide}
+                      metalness={0.5}
+                      roughness={0.4}
+                      speed={0.5}
+                      factor={1}
+                      color={"crimson"}
+                    />
+                  </mesh>
+                </group>
+                <OrbitControls enableZoom={false} />
             </Canvas>
         </div>  
   )
