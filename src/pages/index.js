@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef, useState } from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
@@ -22,11 +22,13 @@ const BlogIndex = ({ data, location }) => {
       </Layout>
     )
   }
-
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="@iagokrt" />
       <Bio />
+      <div>
+        <a href="/labs">[NEW] Go To Laboratory ⚗️</a>
+      </div>
       {posts.map(post => {
         const title = post.frontmatter.title || post.fields.slug
         return (

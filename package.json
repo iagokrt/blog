@@ -8,9 +8,13 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@react-three/drei": "^4.3.3",
+    "@react-three/fiber": "^6.1.2",
+    "dat.gui": "^0.7.7",
     "gatsby": "^2.24.63",
     "gatsby-image": "^2.4.19",
     "gatsby-plugin-feed": "^2.5.12",
+    "gatsby-plugin-glslify": "^1.0.0",
     "gatsby-plugin-google-analytics": "^2.3.14",
     "gatsby-plugin-manifest": "^2.4.30",
     "gatsby-plugin-offline": "^3.2.28",
@@ -24,12 +28,14 @@
     "gatsby-source-filesystem": "^2.3.30",
     "gatsby-transformer-remark": "^2.8.35",
     "gatsby-transformer-sharp": "^2.5.15",
+    "glslify": "^7.1.1",
     "node-sass": "^4.14.1",
     "prismjs": "^1.21.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.11.0",
+    "three": "^0.128.0",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },
@@ -50,7 +56,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "dev": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
