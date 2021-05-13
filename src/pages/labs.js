@@ -1,22 +1,23 @@
-import React, { useRef, useState } from "react"
-import { Link, graphql } from "gatsby"
+import React  from "react"
+// import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+// import Layout from "../components/layout"
+// import SEO from "../components/seo"
 
 import {Canvas} from '@react-three/fiber'
-import {FrontSide} from 'three'
-import {OrbitControls, MeshWobbleMaterial} from '@react-three/drei'
-import * as dat from 'dat.gui';
+// import {FrontSide} from 'three'
+import {OrbitControls} from '@react-three/drei'
+import { SphericalHarmonics3 } from "three";
+// import * as dat from 'dat.gui';
 
-import MusicPlayer from '../components/sound/MusicPlayer'
-import demo from '../../static/demo.mp3';
+// import MusicPlayer from '../components/sound/MusicPlayer'
+// import demo from '../../static/demo.mp3';
 
-import vertex from '../shader/vertex.glsl';
-import fragment from '../shader/fragment.glsl';
+// import vertex from '../shader/vertex.glsl';
+// import fragment from '../shader/fragment.glsl';
 
-import t from '../../static/a-end.jpg'; // end frame of video : the texture that will be used itself with the fragment uniforms
-import t1 from '../../static/a-start.jpg'; // end frame of video : the texture that will be used itself with the fragment uniforms
+// import t from '../../static/a-end.jpg'; // end frame of video : the texture that will be used itself with the fragment uniforms
+// import t1 from '../../static/a-start.jpg'; // end frame of video : the texture that will be used itself with the fragment uniforms
 
 const stylesheets = {
   margin: '0px',
@@ -33,35 +34,35 @@ const stylesheets = {
 
 // must set: uniforms
 // 
-const uniforms = {
-  time: { type: 'f', value: 0 },
-  progress: { type: 'f', value: 0 },
-  uDistortion: { type: 'f', value: 0 },
-  t: {
-    type: 't',
-    value: new THREE.TextureLoader().load(t),
-  },
-  t1: {
-    type: 't',
-    value: new THREE.TextureLoader().load(t1),
-  },
-  resolution: { type: 'v4', value: new THREE.Vector4() },
-  uvRate1: {
-    value: new THREE.Vector2(1, 1),
-  },
-}
+// const uniforms = {
+//   time: { type: 'f', value: 0 },
+//   progress: { type: 'f', value: 0 },
+//   uDistortion: { type: 'f', value: 0 },
+//   t: {
+//     type: 't',
+//     value: new THREE.TextureLoader().load(t),
+//   },
+//   t1: {
+//     type: 't',
+//     value: new THREE.TextureLoader().load(t1),
+//   },
+//   resolution: { type: 'v4', value: new THREE.Vector4() },
+//   uvRate1: {
+//     value: new THREE.Vector2(1, 1),
+//   },
+// }
 
 const LabsCanvas = () => {
 
   return (
         <div style={stylesheets} className="canvas-container">
-            <h1>laboratory ⚗️</h1>
-            <span>
+            <h1>laboratory</h1>
+            <h4>
               This is an experimental area for webGL programs
-            </span>
+            </h4>
             <nav>
               <ul>
-                <li><a href="/">⬅️ Return</a></li>
+                <li><a href="/">Return</a></li>
               </ul>
             </nav>
             <Canvas>
