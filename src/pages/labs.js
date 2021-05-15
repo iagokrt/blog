@@ -8,7 +8,7 @@ import {Canvas, useThree, useFrame} from '@react-three/fiber'
 import {OrbitControls, MeshWobbleMaterial, PerspectiveCamera, useCamera} from '@react-three/drei'
 import { PointsMaterial, FrontSide, Vector3 } from "three";
 // import * as dat from 'dat.gui';
-import {FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon, FaTwitter as TwitterIcon} from 'react-icons/fa'
+import {FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon, FaBehanceSquare as BehanceIcon} from 'react-icons/fa'
 
 // import vertex from '../shader/vertex.glsl';
 // import fragment from '../shader/fragment.glsl';
@@ -28,26 +28,21 @@ const overlay = {position: 'absolute'}
 const Topics = () => {
   return (
     <>
-      <nav className="skew-navigation">
-        <ul style={{padding: '4px 8px'}}>
-          <li key={`skew navigation item-${Math.random(5)}`}>
+      <nav className="navigation-topbar">
+        <ul>
+          <li key={`navigation item-${Math.random(5)}`}>
             <a href="/" className="typograph"><span className="logo" title="back to writings">Write Island</span></a>
           </li>
           <li>
-            <a href="/https://www.linkedin.com/in/iagobarreto/" className="icons first"><span className="" title="contact-linkedin"><LinkedinIcon size={32} color="white" /></span></a>
-            <a href="/https://github.com/iagokrt" className="icons second"><span className="" title="github-profile"><GithubIcon size={32} color="white" /></span></a>
-            <a href="/https://github.com/iagokrt" className="icons third"><span className="" title="github-profile"><TwitterIcon size={32} color="white" /></span></a>
+            <a href="https://www.linkedin.com/in/iagobarreto/" className="icons first"><span className="" title="linkedin-profile"><LinkedinIcon size={32} color="white" /></span></a>
+            <a href="https://github.com/iagokrt" className="icons second"><span className="" title="github-profile"><GithubIcon size={32} color="white" /></span></a>
+            <a href="https://www.behance.net/iagokarneiro" className="icons third"><span className="" title="behance-profile"><BehanceIcon size={32} color="white" /></span></a>
           </li>
         </ul>
       </nav>
       <div style={overlay}>
         <h1>laboratory ⚗️</h1>
-        <h4>This is an experimental area for webGL programs</h4>
-        <nav>
-          <ul>
-            <li><a href="/">Return</a></li>
-          </ul>
-        </nav>
+        <h2 className="labs-text">This is an <span className="outline">experimental</span> area for <span className="outline">webGL</span> programs</h2>
       </div>
     </>
   )

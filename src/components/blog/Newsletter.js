@@ -1,5 +1,5 @@
 import React from "react"
-import {AiTwotoneExperiment} from 'react-icons/ai'
+import {AiTwotoneExperiment} from 'react-icons/fa'
 import {HiOutlineCollection} from 'react-icons/hi'
 const Newsletter = () => {
   return (
@@ -11,8 +11,8 @@ const Newsletter = () => {
         </h2>
         <ul className="content-links">
           <li><a href="/blog" className="content-links-link">Navigate to Blog</a></li>
-          <li><a href="/works" className="content-links-link"><HiOutlineCollection color='blue' siz={43} />Navigate to Projects</a></li>
-          <li><a href="/labs" className="content-links-link"><AiTwotoneExperiment color='red' size={43} />Navigate to WebGL experiments</a></li>
+          <li><a href="/works" className="content-links-link">Navigate to Projects</a></li>
+          <li><a href="/labs" className="content-links-link">Navigate to WebGL experiments</a></li>
         </ul>
       </div>
         <article className="article-ref">

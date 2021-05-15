@@ -21,10 +21,13 @@ const unsplash = data?.unplash?.childImageSharp?.fixed;
     return (
         <>
             <aside className="about-me-container">
-               
                 <div>
-                    <h2 className="about-me"> About Me</h2>
-                    <h5 className="avatar-intro">coding, web development, html, css, three.js, glsl, coreldraw, reactjs, three-fiber, react native & node.js</h5>
+                    <h2 className="about-me"> Welcome!</h2>
+                    <h5 className="avatar-intro">
+                        Now that you're here at Write  Island, you can finally find contents related to: Coding, web development, html, css, three.js, glsl, coreldraw, reactjs, three-fiber, react native & node.js. 
+                        <br />
+                        Dive into the blog to read more...
+                    </h5>
                 </div>
                 <div className="img-avatar-container">
                     {unsplash && (

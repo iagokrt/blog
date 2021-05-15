@@ -30,7 +30,6 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="@iagokrt" />
-      <Newsletter />
       <About />
       <HomeActions />
     </Layout>
