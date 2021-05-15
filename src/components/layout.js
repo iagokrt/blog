@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import ellipse from '../../static/ellipse.png'
+// import CustomCursor from '../components/CustomCursor'
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -31,7 +32,7 @@ const Layout = ({ location, title, children }) => {
         {children}
       </main>
       <footer>
-        © {new Date().getFullYear()}, Love is what affects our movements.
+        <p> © {new Date().getFullYear()}, Love is what affects our movements.</p>
         <a href="https://www.github.com/iagokrt"> &nbsp; iagokrt &nbsp;</a>
       </footer>
     </div>

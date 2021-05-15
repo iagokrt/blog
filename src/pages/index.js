@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 
 import Bio from "../components/bio/bio"
 import HomeActions from '../components/blog/HomeActions'
-import Title from '../components/blog/Title'
+import About from '../components/blog/About'
 import Contact from '../components/bio/contact'
 import Newsletter from "../components/blog/Newsletter"
 
@@ -19,7 +19,6 @@ const BlogIndex = ({ data, location }) => {
     return (
       <Layout location={location} title={siteTitle}>
         <SEO title="where are these posts" />
-        <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -31,8 +30,9 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="@iagokrt" />
+      <Newsletter />
+      <About />
       <HomeActions />
-      <Bio />
     </Layout>
   )
 }

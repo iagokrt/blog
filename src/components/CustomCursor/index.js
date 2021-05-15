@@ -1,22 +1,21 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 
-// import './style.scss'
-// not currently working tho
-// const CustomCursor = () => {
+const CustomCursor = () => {
 
-//   const cursorRef = React.useRef(null)
-//   React.useEffect(()=> {
-//     document.addEventListener('mousemove', (event) => {
-//       const {clientX, clientY} = event;
-//       const mouseX = clientX - cursorRef.current.clientWidth / 2;
-//       const mouseY = clientY - cursorRef.current.clientHeight / 2;
-//       cursorRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, -200px`;
-//     })
-//   })
+  const cursorRef = useRef(null)
 
-//   return (
-//     <div className="app-cursor" ref={cursorRef} />
-//   )
-// }
+  useEffect(()=> {
+    document.addEventListener('mousemove', (event) => {
+      const {clientX, clientY} = event;
+      const mouseX = clientX - cursorRef.current.clientWidth / 1.8;
+      const mouseY = clientY - cursorRef.current.clientHeight / 1.30;
+      cursorRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0px`;
+    })
+  })
 
-// export default CustomCursor
+  return (
+    <div className="app-cursor" ref={cursorRef} />
+  )
+}
+
+export default CustomCursor

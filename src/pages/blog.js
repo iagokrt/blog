@@ -7,13 +7,13 @@ import Layout from "../components/layout"
 import Contact from '../components/bio/contact'
 import Technologies from '../components/bio/technologies'
 import HomeActions from '../components/blog/HomeActions'
-import Title from '../components/blog/Title'
+import About from '../components/blog/About'
 import Newsletter from "../components/blog/Newsletter"
 
 
 import SEO from "../components/seo"
 
-const BlogIndex = ({ data, location }) => {
+const Blog = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
@@ -32,8 +32,8 @@ const BlogIndex = ({ data, location }) => {
   }
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="@iagokrt" />
-      <Title />
+      <SEO title="technologies" />
+      <About />
       <div className="post-list-container">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -64,15 +64,11 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </div>
-      <Newsletter />
-      <Bio />
-      <Contact />
-      <Technologies />
     </Layout>
   )
 }
 
-export default BlogIndex
+export default Blog
 
 export const pageQuery = graphql`
   query {
