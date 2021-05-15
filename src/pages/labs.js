@@ -47,7 +47,7 @@ const LabsCanvas = () => {
       // console.log('camera state:', state.camera)
       state.camera.lookAt(new Vector3(2,2,-50))
     })
-    console.log(state.camera)
+    
     return null
   }
   return (

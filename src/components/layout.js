@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 
 import ellipse from '../../static/ellipse.png'
 
+import Technologies from '../components/bio/technologies'
+
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
@@ -31,9 +33,7 @@ const Layout = ({ location, title, children }) => {
         {children}
       </main>
       <footer>
-      <div>
-      <h5 id="labs-link" className="text-blur-out"><a href="/labs">[NEW] Go To Laboratory ⚗️</a></h5>
-    </div>
+        <Technologies />
         © {new Date().getFullYear()}, Love is what affects our movements.
         <a href="https://www.github.com/iagokrt"> &nbsp; iagokrt &nbsp;</a>
       </footer>

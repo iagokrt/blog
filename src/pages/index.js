@@ -1,9 +1,17 @@
 import React, {useRef, useState} from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
+import Bio from "../components/bio/bio"
 import Layout from "../components/layout"
+import Title from '../components/blog/Title'
+
+import Contact from '../components/bio/contact'
+
 import SEO from "../components/seo"
+import images from "../images/images"
+
+import useWindowSize from '../hooks/useWindowSize'
+import ProjectLinks from "../components/bio/projects/ProjectLinks"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -11,7 +19,12 @@ const BlogIndex = ({ data, location }) => {
 
   // const backgroundRef = useRef()
   const [favorite, setFavorite] = useState(true) 
-  // const [normal, setNormal] = useState(true) 
+  const [normal, setNormal] = useState(true) 
+
+  const wrapperRef = useRef()
+
+  const scrollContainer = useRef()
+
 
 
   if (posts.length === 0) {
@@ -30,7 +43,25 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="@iagokrt" />
-
+      <ProjectLinks />
+      <article ref={wrapperRef} className="article-scroll">
+      <aside ref={scrollContainer} id="scroller" className="scroll">
+                {images.map((image, index) => (
+                <>
+                  <div key={index} className="img-container">
+                    <img src={image} alt={`People ${index}`} />
+                  </div>
+                  <h2>
+                    Test △ <span className="outline">Projects</span>
+                  </h2>
+                </>
+                )
+            )}
+          </aside>
+      </article>
+     
+      <Title />
+      
       <div className="post-list-container">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -61,7 +92,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </div>
-      <Bio />
+      <Contact />
     </Layout>
   )
 }

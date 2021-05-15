@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 import Drago from '../../static/drago.gif';
 
-import { Canvas } from '@react-three/fiber'
+// import { Canvas } from '@react-three/fiber'
 
 const NotFoundPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title

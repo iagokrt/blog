@@ -9,6 +9,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
+import ProjectLinks from '../bio/projects/ProjectLinks'
+
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -41,21 +43,23 @@ const Bio = () => {
 
   return (
     <div className="bio">
+      <aside id="avatar">
       {avatar && (
         <Image
           fixed={avatar}
           alt={`pic`}
-          className="bio-avatar heartbeat"
+          className="bio-avatar"
           imgStyle={{
             borderRadius: `50%`,
           }}
         />
       )}
+      </aside>
       {author?.name && (
-        <p>
-          My name is <strong>{author.name}.</strong> {author?.summary || null}
-          {` `}
-        </p>
+          <p>
+            My name is <strong>{author.name}.</strong> {author?.summary || null}
+            {` `}
+          </p>
       )}
     </div>
   )

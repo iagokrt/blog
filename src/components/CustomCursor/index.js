@@ -1,7 +1,7 @@
 import React from 'react'
 
 // import './style.scss'
-
+// not currently working tho
 const CustomCursor = () => {
 
   const cursorRef = React.useRef(null)
