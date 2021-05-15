@@ -1,11 +1,9 @@
 import React from "react"
 import Image from "gatsby-image"
-import Contact from '../contact'
 //   <h3>coding, web development, html, css, three.js, glsl, coreldraw, reactjs, three-fiber, react native & node.js</h3>
 import { useStaticQuery, graphql } from "gatsby"
 
-
-const ProjectLinks = () => {
+const Newsletter = () => {
   const data = useStaticQuery(graphql`
   query UnsplashQuery {
     unplash: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
@@ -64,5 +62,5 @@ const ProjectLinks = () => {
     )
 }
  
-export default ProjectLinks
+export default Newsletter
  

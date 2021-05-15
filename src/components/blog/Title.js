@@ -4,7 +4,7 @@ const Title = () => {
     return (
         <>
             <h2>
-                <span className="outline">Find here</span> some <span className="outline text-blur-out">writings</span> about <span className="outline">coding</span> <br />
+                <span className="outline">Find here</span> small pieces of <span className="outline text-blur-out">writings</span> about <span className="outline">code</span> <br />
             </h2>
         </>
     )

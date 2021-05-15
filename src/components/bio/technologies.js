@@ -2,7 +2,6 @@ import React from "react"
 //  import Image from "gatsby-image"
  
 import technologies from '../../state/technologies'
-//   <h3>coding, web development, html, css, three.js, glsl, coreldraw, reactjs, three-fiber, react native & node.js</h3>
 // import from state the Technologies badges with image title and alt properties.
 const Technologies = () => {
    return (

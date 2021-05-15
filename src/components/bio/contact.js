@@ -2,7 +2,6 @@ import React from "react"
 //  import Image from "gatsby-image"
  
 import contact from '../../state/contact'
-
 // import from state the Contact badges with image title and alt properties.
 const Contact = () => {
     return (
