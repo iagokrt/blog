@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Bio from "../components/bio/bio"
 import HomeActions from '../components/blog/HomeActions'
 import About from '../components/blog/About'
+import Technologies from '../components/bio/technologies'
 import Contact from '../components/bio/contact'
 import Newsletter from "../components/blog/Newsletter"
 
@@ -32,6 +33,7 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="@iagokrt" />
       <About />
       <HomeActions />
+      <Technologies />
     </Layout>
   )
 }

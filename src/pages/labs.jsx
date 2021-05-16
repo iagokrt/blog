@@ -8,8 +8,7 @@ import {Canvas, useThree, useFrame} from '@react-three/fiber'
 import {OrbitControls, MeshWobbleMaterial, PerspectiveCamera, useCamera} from '@react-three/drei'
 import { PointsMaterial, FrontSide, Vector3 } from "three";
 // import * as dat from 'dat.gui';
-import {FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon, FaBehanceSquare as BehanceIcon} from 'react-icons/fa'
-
+import Navigation from '../components/webgl/Navigation'
 // import vertex from '../shader/vertex.glsl';
 // import fragment from '../shader/fragment.glsl';
 
@@ -23,32 +22,7 @@ const stylesheets = {
   textAlign: 'center'
 };
 
-const overlay = {position: 'absolute'}
-
-const Topics = () => {
-  return (
-    <>
-      <nav className="navigation-topbar">
-        <ul>
-          <li key={`navigation item-${Math.random(5)}`}>
-            <a href="/" className="typograph"><span className="logo" title="back to writings">Write Island</span></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/iagobarreto/" className="icons first"><span className="" title="linkedin-profile"><LinkedinIcon size={32} color="white" /></span></a>
-            <a href="https://github.com/iagokrt" className="icons second"><span className="" title="github-profile"><GithubIcon size={32} color="white" /></span></a>
-            <a href="https://www.behance.net/iagokarneiro" className="icons third"><span className="" title="behance-profile"><BehanceIcon size={32} color="white" /></span></a>
-          </li>
-        </ul>
-      </nav>
-      <div style={overlay}>
-        <h1>laboratory ⚗️</h1>
-        <h2 className="labs-text">This is an <span className="outline">experimental</span> area for <span className="outline">webGL</span> programs</h2>
-      </div>
-    </>
-  )
-}
-
-const LabsCanvas = () => {
+const WebglCanvas = () => {
 
   const Dolly = () => {
     useFrame(state => {
@@ -62,7 +36,7 @@ const LabsCanvas = () => {
   }
   return (
         <div style={stylesheets} className="canvas-container">
-            <Topics />
+            <Navigation />
             <Canvas concurrent colorManagement>
                 <Dolly />
                 <ambientLight intensity={0.1} />
@@ -90,4 +64,4 @@ const LabsCanvas = () => {
   )
 }
 
-export default LabsCanvas
+export default WebglCanvas

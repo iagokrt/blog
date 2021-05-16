@@ -7,7 +7,7 @@ const About = () => {
     query UnsplashQuery {
         unplash: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
             childImageSharp {
-                fixed(width: 50, height: 50, quality: 95) {
+                fixed(width: 150, height: 150, quality: 95) {
                     ...GatsbyImageSharpFixed
                 }
             }

@@ -7,9 +7,8 @@ import Layout from "../components/layout"
 import Contact from '../components/bio/contact'
 import Technologies from '../components/bio/technologies'
 import HomeActions from '../components/blog/HomeActions'
-import About from '../components/blog/About'
 import Newsletter from "../components/blog/Newsletter"
-
+import About from '../components/blog/About'
 
 import SEO from "../components/seo"
 
@@ -33,7 +32,7 @@ const Blog = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="technologies" />
-      <About />
+      <Bio />
       <div className="post-list-container">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -64,6 +63,10 @@ const Blog = ({ data, location }) => {
           )
         })}
       </div>
+        <Contact />
+        <Newsletter />
+        <Technologies display={'flex'} />
+
     </Layout>
   )
 }
