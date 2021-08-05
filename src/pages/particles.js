@@ -22,19 +22,7 @@ const stylesheets = {
   textAlign: 'center'
 };
 
-const WebglCanvas = () => {
-
-  // const Dolly = () => {
-  //   useFrame(state => {
-  //     state.camera.position.z = 2.2 + Math.sin(state.clock.getElapsedTime()) * 92
-  //     state.camera.updateProjectionMatrix()
-  //     // console.log('camera state:', state.camera)
-  //     state.camera.lookAt(new Vector3(2,2,-50))
-  //   })
-    
-  //   return null
-  // }<Dolly />
-
+const Particles = () => {
   return (
         <div style={stylesheets} className="canvas-container">
             <Navigation />
@@ -46,18 +34,7 @@ const WebglCanvas = () => {
                 <directionalLight color="blue" position={[0, 0, -5]} />
 
                 <group>
-                  <mesh>
-                    <sphereBufferGeometry args={[210, 290, 95]} attach="geometry" />
-                    <MeshWobbleMaterial
-                      attach="material"
-                      side={FrontSide}
-                      metalness={0.5}
-                      roughness={0.4}
-                      speed={0.5}
-                      factor={1}
-                      color={"crimson"}
-                    />
-                  </mesh>
+                 
                 </group>
                 <OrbitControls enableZoom={true} />
             </Canvas>
@@ -65,4 +42,4 @@ const WebglCanvas = () => {
   )
 }
 
-export default WebglCanvas
+export default Particles

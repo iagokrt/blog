@@ -31,7 +31,14 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="@iagokrt" />
-      <About />
+      <h5>Launching openGL shader code experiments!</h5>
+      <h6>Navigate between lab experiments to enjoy some magic shaders!</h6>
+      <ul>
+        <li className="shader-examples-list">
+          <a href="/labs">Laboratory V1</a>
+          <a href="/particles">Particles Shaders</a>
+        </li>
+      </ul>
       <HomeActions />
       <Technologies />
     </Layout>

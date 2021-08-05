@@ -3,7 +3,7 @@ module.exports = {
     title: `Write Island`,
     author: {
       name: `Iago Carneiro`,
-      summary: `I'm currently living and working in Florianópolis. I Love building creative interactive things.`,
+      summary: `I Love building creative interactive things.`,
     },
     description: `From floripa with love @iagokrt Blog`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
