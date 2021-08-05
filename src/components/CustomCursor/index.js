@@ -1,16 +1,15 @@
-import React from 'react'
-
-// import './style.scss'
+import React, {useRef, useEffect} from 'react'
 
 const CustomCursor = () => {
 
-  const cursorRef = React.useRef(null)
-  React.useEffect(()=> {
+  const cursorRef = useRef(null)
+
+  useEffect(()=> {
     document.addEventListener('mousemove', (event) => {
       const {clientX, clientY} = event;
-      const mouseX = clientX - cursorRef.current.clientWidth / 2;
-      const mouseY = clientY - cursorRef.current.clientHeight / 2;
-      cursorRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, -200px`;
+      const mouseX = clientX - cursorRef.current.clientWidth / 1.8;
+      const mouseY = clientY - cursorRef.current.clientHeight / 1.30;
+      cursorRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0px`;
     })
   })
 

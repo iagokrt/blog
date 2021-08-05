@@ -6,5 +6,8 @@ import "./src/normalize.css"
 // custom CSS styles
 import "./src/style.css"
 
+// custom sass
+// import "./src/sheets.scss"
+
 // Highlighting for code blocks
 import "prismjs/themes/prism.css"

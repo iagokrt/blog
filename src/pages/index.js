@@ -1,24 +1,25 @@
-import React, {useRef, useState} from "react"
+import React, {useRef, useState, useEffect} from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
+
+import Bio from "../components/bio/bio"
+import HomeActions from '../components/blog/HomeActions'
+import About from '../components/blog/About'
+import Technologies from '../components/bio/technologies'
+import Contact from '../components/bio/contact'
+import Newsletter from "../components/blog/Newsletter"
+
 import SEO from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-  // const backgroundRef = useRef()
-  const [favorite, setFavorite] = useState(true) 
-  // const [normal, setNormal] = useState(true) 
-
-
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
         <SEO title="where are these posts" />
-        <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -30,38 +31,16 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="@iagokrt" />
-
-      <div className="post-list-container">
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
-          return (
-            <article
-              key={post.fields.slug}
-              className={favorite ? "post-list-item background-modify-y" : "post-list-item"} 
-              itemScope
-              itemType="http://schema.org/Article"
-            >
-              <header>
-                <h2>
-                  <Link to={post.fields.slug} itemProp="url">
-                    <span itemProp="headline">{title}</span>
-                  </Link>
-                </h2>
-                <small>{post.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: post.frontmatter.description || post.excerpt,
-                  }}
-                  itemProp="description"
-                />
-              </section>
-            </article>
-          )
-        })}
-      </div>
-      <Bio />
+      <h5>Launching openGL shader code experiments!</h5>
+      <h6>Navigate between lab experiments to enjoy some magic shaders!</h6>
+      <ul>
+        <li className="shader-examples-list">
+          <a href="/labs">Laboratory V1</a>
+          <a href="/particles">Particles Shaders</a>
+        </li>
+      </ul>
+      <HomeActions />
+      <Technologies />
     </Layout>
   )
 }

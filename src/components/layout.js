@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import ellipse from '../../static/ellipse.png'
+// import CustomCursor from '../components/CustomCursor'
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -10,13 +11,13 @@ const Layout = ({ location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
+      <h1 className="main-heading logo">
         <Link id="title-home-link" to="/">{title}</Link>
       </h1>
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
+      <Link className="header-link-home logo" to="/">
         &larr; {title}
       </Link>
     )
@@ -31,10 +32,7 @@ const Layout = ({ location, title, children }) => {
         {children}
       </main>
       <footer>
-      <div>
-      <h5 id="labs-link" className="text-blur-out"><a href="/labs">[NEW] Go To Laboratory ⚗️</a></h5>
-    </div>
-        © {new Date().getFullYear()}, Love is what affects our movements.
+        <p> © {new Date().getFullYear()}, Love is what affects our movements.</p>
         <a href="https://www.github.com/iagokrt"> &nbsp; iagokrt &nbsp;</a>
       </footer>
     </div>
