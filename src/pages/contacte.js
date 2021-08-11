@@ -7,7 +7,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import projects from '../state/projects'
 
-import useWindowSize from '../hooks/useWindowSize'
 import Contact from  '../components/bio/contact' 
 import Technologies from  '../components/bio/technologies'
 import Bio from '../components/bio/bio'
