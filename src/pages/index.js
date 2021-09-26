@@ -33,25 +33,30 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="@iagokrt" />
-      <h2 className="welcome-text" style={{textAlign: 'center'}}>
-        <span style={{fontSize: '2rem', marginBottom: '22px'}}>Welcome!</span> <br/>
-      </h2>
-      <h4 style={{marginTop: '12px', textAlign: 'center'}}>Now that you're here, you can choose either to <span className="outline">navigate</span> or <span className="outline">select</span> a post to read!</h4>
-      
+     
+
       <HomeActions />
       <NewsTicker />
       <TooltipGuided />
+      
+      <hr style={{backgroundColor: '#1f0411', height: '1.5px', width: '89%'}}/>
+     
 
       <About />
-      <Technologies />
       <Newsletter />
       <Contact />
       <Bio />
+      <Technologies />
      
     </Layout>
   )
 }
-
+/**
+ *  <h1 className="welcome-text" style={{textAlign: 'center', marginBottom: '52px'}}>
+        <span style={{fontSize: '2rem', marginBottom: '22px'}}>Welcome!</span> <br/>
+      </h1>
+       <hr style={{backgroundColor: '#1f0411', height: '2px', border: '1px solid #1f0411 '}}/>
+ */
 export default BlogIndex
 
 export const pageQuery = graphql`

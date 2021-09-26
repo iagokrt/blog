@@ -11,7 +11,7 @@ const Contact = () => {
             <div className="contact-badges">
                 {contact.map((item, index) => (
                     <>
-                        <div key={index} className="">
+                        <div key={index}>
                             <img title={item.title} src={item.source} alt={item.alt} />
                         </div>
                     </>

@@ -331,7 +331,7 @@ a {
 }
 
 .global-header {
-  margin-bottom: var(--spacing-12);
+  margin-bottom: var(--spacing-6);
 }
 
 .main-heading {
@@ -592,8 +592,8 @@ html, body {
 
   margin-top: 2rem;
   margin-bottom: 2.2rem;
-  margin-left: 75px;
-  margin-right: 75px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .home-button {
   width: 180px;
@@ -628,7 +628,7 @@ html, body {
 /* specify hover for particular buttons*/
 .buttons .projects-ref:hover {
   /* background-color: red; */
-  transform: scale(1.22) translateY(-20px);;
+  transform: scale(1.22) translateY(20px);;
 }
 .content-links {
   padding-top: 5px;
@@ -648,11 +648,15 @@ html, body {
 /* home intro - picture and text - about me */
 .about-me-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 
   margin-top: 5rem;
+}
+.about-me-container canvas {
+  width: 800px;
+  height: 700px;
 }
 .avatar-intro {
   margin-top: 0;
@@ -844,8 +848,29 @@ html, body {
 /* Typography effects */
 
 /* Outline for text */
+.outline-text-2 {
+  font-size: 2rem;
+}
+.outline-text-1 {
+  font-size: 1.7rem;
+}
+
 .outline {
   -webkit-text-stroke: 1px crimson;
+  -webkit-text-fill-color: #320d1f;
+}
+
+.outline-orange {
+  -webkit-text-stroke: 1px darkorange;
+  -webkit-text-fill-color: #320d1f;
+}
+.outline-background-sized {
+  font-size: 2rem;
+  -webkit-text-stroke: 0.4px white;
+  -webkit-text-fill-color: var(--color-pallete-background-color);
+}
+.outline-green {
+  -webkit-text-stroke: 1px #1ae687d0;
   -webkit-text-fill-color: #320d1f;
 }
 .outline-darker {
@@ -880,8 +905,8 @@ html, body {
 /* WriteIsland Components */
 
 @keyframes waves {
-  0%,100% {
-    background: repeating-linear-gradient(-95deg, transparent, #0a071b  900px);
+  0% {
+    background: repeating-linear-gradient(-95deg, transparent, #09022e  960px);
   }
   1% {
     background: repeating-linear-gradient(-84deg, transparent, #0a071b  800px);
@@ -913,28 +938,28 @@ html, body {
   89% {
     background: repeating-linear-gradient(-34deg, transparent, #040418  2px);
   }
+  100% {
+    background: repeating-linear-gradient(-95deg, transparent, #09022e  960px);
+  }
 }
 
 aside.buttons {
-  /* background: red; */
-  
-  /* background: repeating-linear-gradient(-45deg, transparent, #483D8B  805px); */
-  animation: waves 20s ;
+  animation: waves 18s;
   animation-delay: 2s;
 }
 
 @keyframes hello {
   0%,100% {
-    background: repeating-radial-gradient(#320d1f, transparent 60px);
+    background: repeating-radial-gradient(#4a158ff5, transparent 200px);
   }
   25% {
-    background: repeating-radial-gradient(#2c0a1b, transparent 30px);
+    background: repeating-radial-gradient(#4a158fe0, transparent 100px);
   }
   50% {
-    background: repeating-radial-gradient(#31081c, transparent 15px);
+    background: repeating-radial-gradient(#4a158fa1, transparent 55px);
   }
   75% {
-    background: repeating-radial-gradient(#1f0411, transparent 30px);
+    background: repeating-radial-gradient(#4a158f5b, transparent 20px);
   }
   /* from {background: repeating-radial-gradient(#1F0B4B, transparent 59px);}
   to {background: repeating-radial-gradient(#1F0B4B, transparent 590px);} */
@@ -951,7 +976,7 @@ aside.buttons a.contact-ref {
   animation: hello 15s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite alternate;
 }
 aside.buttons a.labs-ref {
-  animation: hello 23s ease-out infinite alternate;
+  animation: hello 7s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite alternate;
 }
 
 @keyframes ticker {
@@ -993,10 +1018,17 @@ aside.buttons a.labs-ref {
   animation: ticker 20s cubic-bezier(1, 0, .5, 0) infinite;
   -webkit-user-select: none
 }
-
+.blog-news {
+  padding: 10px;
+}
 .webgl-news ul {
   animation: ticker 12s cubic-bezier(1, 0, .5, 0) infinite;
-
+}
+.webgl-design ul {
+  animation: ticker 7s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+}
+.webgl-three ul {
+  animation: ticker 15s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
 }
 .news-disabled ul {
   animation: ticker 0s cubic-bezier(1, 0, .5, 0);
@@ -1183,6 +1215,33 @@ SVG Icons - svgicons.sparkk.fr
 
 /* Text */
 
+/* Media Queries */
 
+@media only screen and (max-width: 1173px) {
+  aside.buttons {
+    /* display: flex; */
+    flex-direction: column;
+  } 
+}
+
+.news-ticker-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 855px) {
+  .news-ticker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+  }
+  .news-ticker-container .blog-news {
+    padding: 2px;
+  }
+}
 
 

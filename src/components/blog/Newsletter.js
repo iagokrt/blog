@@ -5,18 +5,8 @@ const Newsletter = () => {
   return (
      <>
       <div className="section-links article-container" id="article-container">
-      <div className="article-container-title intro">
-        <h2>
-          <span className="outline">New </span>Content Available
-        </h2>
-        <ul className="content-links">
-          <li><a href="/blog" className="content-links-link">Navigate to Blog</a></li>
-          <li><a href="/works" className="content-links-link">Navigate to Projects</a></li>
-          <li><a href="/labs" className="content-links-link">Navigate to WebGL experiments</a></li>
-        </ul>
-      </div>
         <article className="article-ref">
-          <a href="#notYet" title="Article - computer-graphics" className="article-link">
+          <a href="/labs" title="Article - computer-graphics" className="article-link">
             <p className="article-ph">Computação gráfica</p>
             <h3 className="">
               <span className="">corel<span className="outline-reverse">draw</span> and vectoring</span>
@@ -24,7 +14,7 @@ const Newsletter = () => {
           </a>
         </article>
         <article className="">
-          <a href="#" title="Article - glsl shaders" className="article-link" >
+          <a href="/labs" title="Article - glsl shaders" className="article-link" >
             <p className="article-ph">shaders</p>
             <h3 className="">
               <span className="outline-fill">Coding </span>

@@ -32,7 +32,7 @@ const Layout = ({ location, title, children }) => {
         {children}
       </main>
       <footer>
-        <p> © {new Date().getFullYear()}, Write Island.</p>
+        <p style={{margin: '0 10px'}}> © {new Date().getFullYear()}, Write Island.</p>
         <a href="https://www.github.com/iagokrt"> &nbsp; iagokrt &nbsp;</a>
       </footer>
     </div>
