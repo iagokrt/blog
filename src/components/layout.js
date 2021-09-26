@@ -24,7 +24,7 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath} style={{cursor: `url(${ellipse}), auto`}}>
+    <div className="global-wrapper" data-is-root-path={isRootPath} >
       <header className="global-header">
         {header} 
       </header>
@@ -32,7 +32,7 @@ const Layout = ({ location, title, children }) => {
         {children}
       </main>
       <footer>
-        <p> © {new Date().getFullYear()}, Love is what affects our movements.</p>
+        <p> © {new Date().getFullYear()}, Write Island.</p>
         <a href="https://www.github.com/iagokrt"> &nbsp; iagokrt &nbsp;</a>
       </footer>
     </div>

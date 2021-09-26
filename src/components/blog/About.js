@@ -7,7 +7,10 @@ const About = () => {
         <>
             <aside className="about-me-container">
                 <div>
-                    <h4 className="about-me"> Welcome!</h4>
+                    <h2>
+                        Hi, nice to meet you..
+                        I will first present myself then I will show you my Art!
+                    </h2>
                     <p className="">
                         Now that you're here at Write  Island, you can finally find contents related to: <br />
                         Coding, web development, html, css, three.js, glsl, coreldraw, reactjs, three-fiber, react native & node.js. 

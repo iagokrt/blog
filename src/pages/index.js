@@ -9,6 +9,8 @@ import About from '../components/blog/About'
 import Technologies from '../components/bio/technologies'
 import Contact from '../components/bio/contact'
 import Newsletter from "../components/blog/Newsletter"
+import NewsTicker from '../components/blog/NewsTicker';
+import TooltipGuided from '../components/blog/TooltipGuided';
 
 import SEO from "../components/seo"
 
@@ -31,16 +33,21 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="@iagokrt" />
-      <h5>Launching openGL shader code experiments!</h5>
-      <h6>Navigate between lab experiments to enjoy some magic shaders!</h6>
-      <ul>
-        <li className="shader-examples-list">
-          <a href="/labs">Laboratory V1</a>
-          <a href="/particles">Particles Shaders</a>
-        </li>
-      </ul>
+      <h2 className="welcome-text" style={{textAlign: 'center'}}>
+        <span style={{fontSize: '2rem', marginBottom: '22px'}}>Welcome!</span> <br/>
+      </h2>
+      <h4 style={{marginTop: '12px', textAlign: 'center'}}>Now that you're here, you can choose either to <span className="outline">navigate</span> or <span className="outline">select</span> a post to read!</h4>
+      
       <HomeActions />
+      <NewsTicker />
+      <TooltipGuided />
+
+      <About />
       <Technologies />
+      <Newsletter />
+      <Contact />
+      <Bio />
+     
     </Layout>
   )
 }

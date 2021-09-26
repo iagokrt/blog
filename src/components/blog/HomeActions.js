@@ -4,15 +4,22 @@ import React from "react"
 const HomeActions = () => {
     return (
         <aside className="buttons">  
-            <a className="home-button blog-ref" title="Read Blog" href="/blog"><span  style={{fontSize: '29px'}} className="outline-reverse">Blog</span>. <br />
-                Here you can read about web development and coding
+            <a className="home-button blog-ref" title="Read Blog" href="/blog">
+                <span className="outline-reverse">Blog</span>. 
             </a>
-            <a className="home-button projects-ref" title="Projects Portfolio" href="/works"><span  style={{fontSize: '29px'}} className="outline-reverse">Projects</span>. <br />
-                Find and discover code and live demos for projects!
+            <a className="home-button projects-ref" title="Projects" href="/works">
+                <span className="outline-reverse">Projects</span>. 
             </a>
-             <a className="home-button contact-ref" title="Professional Contact" href="/contacte"><span  style={{fontSize: '29px'}} className="outline-background">Contact Info</span></a>
-                <a className="home-button labs-ref" title="beta--webgl-experiments" href="/labs">[ NEW ] <span  style={{fontSize: '29px'}} className="outline"><span role="img" aria-label="alembic">⚗️</span> WebGL Labs</span>
-                </a>
+            
+            <a className="home-button contact-ref" title="Professional Contact" href="/contacte">
+                <span className="outline-background">Contact</span>. 
+            </a>
+            
+            <a className="home-button labs-ref" title="beta--webgl-experiments" href="/labs" style={{flexDirection: 'column-reverse'}}>
+                <span role="img" aria-label="alembic">⚗️</span>
+                <span className="outline-reverse">WebGL Labs</span>
+            </a>
+            
         </aside>
     )
 }

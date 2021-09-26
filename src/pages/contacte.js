@@ -16,6 +16,7 @@ const Contacte = () => {
   return (
     <>
       <Navigation />
+      <h2>Yes This is the latest news around <span className="outline">these </span> things</h2>
     </>
   )
 }
