@@ -1,6 +1,6 @@
 import React from "react"
 import {Canvas, useThree, useFrame} from '@react-three/fiber'
-import {OrbitControls, MeshWobbleMaterial, PerspectiveCamera, useCamera} from '@react-three/drei'
+import {OrbitControls, MeshWobbleMaterial, PerspectiveCamera, useCamera, FlyControls, TrackballControls} from '@react-three/drei'
 import { PointsMaterial, FrontSide, Vector3 } from "three";
 
 import { useStaticQuery, graphql } from "gatsby"
@@ -19,13 +19,10 @@ const About = () => {
                         So when I started to code, every project I designed was related to some kinda of artistic background.
                     </p>
                     <p className="">
-                        Now that you're here at Write  Island, you can finally find contents related to: <br />
-                        Coding, web development, html, css, three.js, glsl, coreldraw, reactjs, three-fiber, react native & node.js. 
+                       This website is my professional inspiration that sorounds* everything and mix my technological knowledge, design and coding skills
+                        * 
                     </p>
-                    <p className="">
-                        Now that you're here at Write  Island, you can finally find contents related to: <br />
-                        Coding, web development, html, css, three.js, glsl, coreldraw, reactjs, three-fiber, react native & node.js. 
-                    </p>
+                    
                 </div>
                 <Canvas concurrent colorManagement style={{width: '90%'}}>
 
@@ -46,22 +43,23 @@ const About = () => {
 
 
                     <group>
-                        <mesh position={[0,0, 36]}>
+                        <mesh position={[0,0, 0]} rotateX={180} >
                             <sphereBufferGeometry 
-                                args={[15, 2, 55]}
+                                args={[14, 1.3, 53]}
                                 attach="geometry"
                             />
                             <MeshWobbleMaterial
                                 attach="material"
                                 side={FrontSide}
-                                metalness={0.42}
-                                speed={Math.PI / 2}
+                                metalness={0.12}
+                                speed={2}
                                 color={"#0192ec"}
+
                             />
                         </mesh>
                     </group>
                         
-                    <OrbitControls enableZoom={false} enableDamping={true} />
+                    <TrackballControls  />
                 </Canvas>
             </aside>
         </>
@@ -69,6 +67,9 @@ const About = () => {
 }
 /**
  *   <OrbitControls minAzimuthAngle={Math.PI*2} maxAzimuthAngle={Math.PI}  />
- * 
+ * <p className="">
+ Now that you're here at Write  Island, you can finally find contents related to: <br />
+ Coding, web development, html, css, three.js, glsl, coreldraw, reactjs, three-fiber, react native & node.js. 
+    </p>
  */
 export default About

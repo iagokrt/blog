@@ -131,7 +131,6 @@ const NewsTicker = () => {
     )
 }
 
-
 /**
  *  <div>
             <div style={{display: 'flex', flexDirection: 'row'}}>

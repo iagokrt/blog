@@ -36,13 +36,16 @@ const BlogIndex = ({ data, location }) => {
      
 
       <HomeActions />
-      <NewsTicker />
-      <TooltipGuided />
       
-      <hr style={{backgroundColor: '#1f0411', height: '1.5px', width: '89%'}}/>
+      
+      <hr style={{backgroundColor: '#1f0411', height: '1.5px', width: '89%', marginBottom: '0'}}/>
      
 
       <About />
+
+      <NewsTicker />
+      <TooltipGuided />
+
       <Newsletter />
       <Contact />
       <Bio />

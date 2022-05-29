@@ -31,9 +31,10 @@ const Layout = ({ location, title, children }) => {
       <main>
         {children}
       </main>
-      <footer>
+      <footer style={{fontSize: '0.8rem', marginTop: '2rem'}}>
         <p style={{margin: '0 10px'}}> © {new Date().getFullYear()}, Write Island.</p>
-        <a href="https://www.github.com/iagokrt"> &nbsp; iagokrt &nbsp;</a>
+        <span>Conceptual Design and Development by  </span>
+        <a href="https://www.linkedin.com/in/iagobarreto/" target="_blank" rel="noreferrer"> &nbsp; iagokrt &nbsp;</a>
       </footer>
     </div>
   )

@@ -19,6 +19,8 @@ const Contact = () => {
                 )}
             </div>
             
+            
+
             <h2>Yes I <span className="outline">see</span> you</h2>
         </div>
     )

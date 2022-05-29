@@ -327,7 +327,8 @@ a {
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
-  margin-bottom: var(--spacing-20);
+  margin-top: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
 }
 
 .global-header {
@@ -652,12 +653,20 @@ html, body {
   align-items: center;
   justify-content: center;
 
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
+  margin-top: 0rem;
+}
+.about-me-container:last-child {
+  width: 90% !important;
 }
 .about-me-container canvas {
   width: 800px;
   height: 700px;
 }
+/* .canvas-overlapsed-dom {
+  padding: var(--spacing-5) var(--spacing-5);
+} */
+
 .avatar-intro {
   margin-top: 0;
   margin-bottom: 22px;
@@ -944,7 +953,7 @@ html, body {
 }
 
 aside.buttons {
-  animation: waves 18s;
+  animation: waves 18s alternate infinite;
   animation-delay: 2s;
 }
 
@@ -1182,7 +1191,7 @@ aside.buttons a.labs-ref {
 }
 .main .wrapper {
   margin-bottom: 2rem;
-  padding: 0 0.5rem;
+  padding: 0 7.5rem;
 }
 .main .flex {
   display: flex;
@@ -1223,6 +1232,11 @@ SVG Icons - svgicons.sparkk.fr
     flex-direction: column;
   } 
 }
+@media only screen and (min-width: 1073px) {
+  .main {
+    width: 12rem;
+  }
+}
 
 .news-ticker-container {
   display: flex;
@@ -1241,6 +1255,9 @@ SVG Icons - svgicons.sparkk.fr
   }
   .news-ticker-container .blog-news {
     padding: 2px;
+  }
+  .main {
+    width: calc(100% - 30px);
   }
 }
 
