@@ -16,7 +16,7 @@ const Works = ({data, location}) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Portfolio" />
       <h1 className="portfolio-title">
-        <span class="outline">Works</span> - Portfolio - <span class="outline">Ideas</span>
+        <span className="outline">Works</span> - Portfolio - <span className="outline">Ideas</span>
       </h1>
       <hr style={{backgroundColor: 'crimson', height: '1.5px', width: '50%', marginBottom: '0'}}/>
 
@@ -51,7 +51,7 @@ const Works = ({data, location}) => {
         <div className="work-category visual-communication">
           <hr style={{backgroundColor: '#1f0411', height: '1.5px', width: '95%', marginBottom: '0'}}/>
 
-          <h1 className="portfolio-title"> Visual Communication <span class="outline">Design</span></h1>
+          <h1 className="portfolio-title"> Visual Communication <span className="outline">Design</span></h1>
         </div>
 
         {/* webgl portfolio */}

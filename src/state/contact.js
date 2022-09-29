@@ -3,7 +3,7 @@ const contact = [
         title: 'CODEWARS',
         source: 'https://www.codewars.com/users/iagobarretoc/badges/micro',
         alt: 'CODEWARS',
-        link: 'https://www.codewars.com/users/iagobarretoc/badges/micro'
+        link: 'https://www.codewars.com/users/iagobarretoc'
     },
     {
         title: 'HackerRank',
@@ -33,7 +33,7 @@ const contact = [
         title: 'WhatsApp',
         source: 'https://camo.githubusercontent.com/d9d4db0a25f6d41d6ef282c6adc2f9bd5b31201ef00ba580f5a945da4063a937/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f57686174734170702d3235443336363f7374796c653d666f722d7468652d6261646765266c6f676f3d7768617473617070266c6f676f436f6c6f723d7768697465',
         alt: 'WhatsApp',
-        link: 'https://wa.me/5548988292263'
+        link: 'https://wa.me/5548988292263?lang=pt_br'
     },
     {
         title: 'GitHub',

@@ -1,5 +1,5 @@
 import React from "react"
-import { FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon, FaBehanceSquare as BehanceIcon } from 'react-icons/fa'
+import { FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon } from 'react-icons/fa'
 
 const overlay = {position: 'absolute', top: '500px'}
 
@@ -16,19 +16,14 @@ const Navigation = () => {
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/iagobarreto/" className="icons first">
-              <span className="" title="linkedin-profile">
-                <LinkedinIcon size={32} color="white" />
-              </span>
-            </a>
             <a href="https://github.com/iagokrt" className="icons second">
               <span className="" title="github-profile">
                 <GithubIcon size={32} color="white" />
               </span>
               </a>
-            <a href="https://www.behance.net/iagokarneiro" className="icons third">
-              <span className="" title="behance-profile">
-                <BehanceIcon size={32} color="white" />
+            <a href="https://www.linkedin.com/in/iagobarreto/" className="icons third">
+              <span className="" title="linkedin-profile">
+                <LinkedinIcon size={32} color="white" />
               </span>
             </a>
           </li>

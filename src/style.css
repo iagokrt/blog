@@ -751,12 +751,9 @@ html, body {
   text-align: center;
 }
 .navigation-topbar ul li a.first:hover {
-  background-color: red;
+  background-color: purple;
 }
 .navigation-topbar ul li a.second:hover {
-  background-color: green;
-}
-.navigation-topbar ul li a.third:hover {
   background-color: blue;
 }
 .labs-text {
