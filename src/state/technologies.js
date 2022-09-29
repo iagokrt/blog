@@ -1,7 +1,8 @@
-const technologies = [{
-    title: 'HTML5',
-    source: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png',
-    alt: 'HTML5'
+const technologies = [
+    {
+        title: 'HTML5',
+        source: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png',
+        alt: 'HTML5'
     },
     {
         title: 'CSS3',
@@ -30,7 +31,7 @@ const technologies = [{
     },
     {
         title: 'THREEJS',
-        source: 'https://pbs.twimg.com/profile_images/1156268573137833984/5gdpZtDv_400x400.jpg',
+        source: 'http://ingenuitysoftwarelabs.com/wp-content/uploads/2022/08/three-js-logo.png',
         alt: 'THREEJS'
     }
 ]

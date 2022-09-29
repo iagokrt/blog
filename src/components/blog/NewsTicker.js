@@ -1,4 +1,5 @@
 import React from "react"
+import { Link, graphql } from "gatsby"
 
 // const tooltipText = 'Clique em alguma das opções de leitura abaixo!'
 
@@ -79,12 +80,11 @@ const randos = [
 const NewsTicker = () => {
     return (
         <>
-            <h5 style={{color: 'sienna', textAlign: 'center', display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>What's new on Write Island?
-            </h5>
+            <h5 className="newsticker-title">What's new on Write Island?</h5>
             <div className="news-ticker-container">
                 <div className="blog-news">
                     <div className="news">
-                        <span className="outline">Blog</span>
+                        <Link className="outline news-link" to="/blog">Blog</Link>
                         <ul>
                             {blogs.map((post, i) => (
                                 <li key={i}>
@@ -94,7 +94,7 @@ const NewsTicker = () => {
                         </ul>
                     </div>
                     <div className="news webgl-news">
-                        <span className="outline-reverse">WebGL</span>
+                        <Link className="outline-reverse news-link" to="/blog">WebGL</Link>
                         <ul>
                             {webgls.map((post, i) => (
                                 <li key={i}>
@@ -106,7 +106,7 @@ const NewsTicker = () => {
                 </div>
                 <div className="blog-news">
                     <div className="news three-news">
-                        <span className="outline-green">THREE.js</span>
+                        <Link className="outline-green news-link" to="/blog">THREE.js</Link>
                         <ul>
                             {threes.map((post, i) => (
                                 <li key={i}>
@@ -116,7 +116,7 @@ const NewsTicker = () => {
                         </ul>
                     </div> 
                     <div className="news design-news">
-                        <span className="outline-orange">Misc</span>
+                        <Link className="outline-orange news-link" to="/blog">Misc</Link>
                         <ul>
                             {randos.map((post, i) => (
                                 <li key={i}>

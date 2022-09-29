@@ -1,19 +1,12 @@
-import React, { useRef }  from "react"
-// import { Link, graphql } from "gatsby"
+import React from "react"
 
-// import Layout from "../components/layout"
-// import SEO from "../components/seo"
 
 import {Canvas, useThree, useFrame} from '@react-three/fiber'
 import {OrbitControls, MeshWobbleMaterial, PerspectiveCamera, useCamera} from '@react-three/drei'
 import { PointsMaterial, FrontSide, Vector3 } from "three";
-// import * as dat from 'dat.gui';
 import Navigation from '../components/webgl/Navigation'
 // import vertex from '../shader/vertex.glsl';
 // import fragment from '../shader/fragment.glsl';
-
-// import t from '../../static/a-end.jpg'; // end frame of video : the texture that will be used itself with the fragment uniforms
-// import t1 from '../../static/a-start.jpg'; // end frame of video : the texture that will be used itself with the fragment uniforms
 
 const stylesheets = {
   margin: '0px',
@@ -23,18 +16,6 @@ const stylesheets = {
 };
 
 const WebglCanvas = () => {
-
-  // const Dolly = () => {
-  //   useFrame(state => {
-  //     state.camera.position.z = 2.2 + Math.sin(state.clock.getElapsedTime()) * 92
-  //     state.camera.updateProjectionMatrix()
-  //     // console.log('camera state:', state.camera)
-  //     state.camera.lookAt(new Vector3(2,2,-50))
-  //   })
-    
-  //   return null
-  // }<Dolly />
-
   return (
         <div style={stylesheets} className="canvas-container">
             <Navigation />

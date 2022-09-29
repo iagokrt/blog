@@ -22,8 +22,5 @@ const TooltipGuided = () => {
         </div>
     )
 }
-/**
- * 
- */
 
 export default TooltipGuided

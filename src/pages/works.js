@@ -5,97 +5,97 @@ import {FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon, FaTwitter as Twitt
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import projects from '../state/projects'
+import projects_webdev from '../state/projects_webdev'
+import projects_shaders from '../state/projects_webdev_shaders'
+import projects_visual_communication from '../state/projects_visual_communication'
+import projects_arduino from '../state/projects_arduino'
 
-import useWindowSize from '../hooks/useWindowSize'
-
-const Works = () => {
-
-  const size = useWindowSize()
-
-  const wrapperRef = useRef()
-  const scrollContainer = useRef()
-
-  // Configs
-  const skewdata = {
-    ease: 0.3,
-    current: 0,
-    previous: 0,
-    rounded: 0
-  };
-
-  // Run scrollrender once page is loaded.
-  useEffect(() => {
-    requestAnimationFrame(() => skewScrolling());
-  }, []);
-
-  //set the height of the body.
-  useEffect(() => {
-    setBodyHeight();
-  }, [size.height]);
-
-
-  const setBodyHeight = () => {
-    document.body.style.height = `${
-      scrollContainer.current.getBoundingClientRect().height
-    }px`;
-  };
-
-  useEffect(() => {
-    requestAnimationFrame(() => skewScrolling())
-  }, [])
-
-  /** skew effect */
-  const skewScrolling = () => {
-    //Set Current to the scroll position amount
-    skewdata.current = window.scrollY;
-    // Set Previous to the scroll previous position
-    skewdata.previous += (skewdata.current - skewdata.previous) * skewdata.ease;
-    // Set rounded to
-    skewdata.rounded = Math.round(skewdata.previous * 100) / 100;
-
-    // Difference between
-    const difference = skewdata.current - skewdata.rounded;
-    const acceleration = difference / size.width;
-    const velocity = +acceleration;
-    const skew = velocity * 35.5;
-
-    //Assign skew and smooth scrolling to the scroll container
-    scrollContainer.current.style.transform = `translate3d(0, -${skewdata.rounded}px, 0) skewY(${skew}deg)`;
-    //loop vai raf
-    requestAnimationFrame(() => skewScrolling());
-  };
+const Works = ({data, location}) => {
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const posts = data.allMarkdownRemark.nodes
 
   return (
-    <>
-    <article ref={wrapperRef} className="scroll-container">
-      <aside ref={scrollContainer} id="scroller" className="scroll">
-            <h1>
-              <span className="outline">Works</span> 
-            </h1>
-            {projects.map((project, index) => (
-              <>
-                <div key={index}>
-                 
-                  <h1 className="project-info">
-                      {project.title} <span className="outline">{project.subtitle}</span>
-                  </h1>
-                  <div className="img-container scroll-skew-img-container">
-                    <img src={project.image} alt={`Project ${index}`} />
+    <Layout location={location} title={siteTitle}>
+      <SEO title="Portfolio" />
+      <h1 className="portfolio-title">
+        <span class="outline">Works</span> - Portfolio - <span class="outline">Ideas</span>
+      </h1>
+      <hr style={{backgroundColor: 'crimson', height: '1.5px', width: '50%', marginBottom: '0'}}/>
+
+      <article  className="scroll-container">
+        {/* Web developer portfolio */}
+        <div className="work-category web-developer">
+
+          <h1 className="portfolio-title"> Web Development </h1>
+          {projects_webdev.map((project, index) => (
+              <div key={index} className="project-wrapper">
+                
+                <section className="project-section">
+                  <div className="project-image-container">
+                    {project.image ? '' : ''}
+                    <img src={project.image ? project.image : '' } alt={`Project ${index}`} />
                   </div>
-                 
-                  <h4 className="project-description">
-                    {project.description}
-                  </h4>
-                </div>
-              </>
-            )
-        )}
-      
-      </aside>
-    </article>
-    </>
+                  <div>
+                    <h2 className="">
+                      {project.title} <span className="outline">{project.subtitle}</span>
+                    </h2>
+                    <h4 className="project-description">
+                      {project.description}
+                    </h4>
+                  </div>
+                </section>
+              </div>
+          )
+          )}
+        </div>
+        
+        {/* visual-communication portfolio */}
+        <div className="work-category visual-communication">
+          <hr style={{backgroundColor: '#1f0411', height: '1.5px', width: '95%', marginBottom: '0'}}/>
+
+          <h1 className="portfolio-title"> Visual Communication <span class="outline">Design</span></h1>
+        </div>
+
+        {/* webgl portfolio */}
+        <div className="work-category webgl-programming">
+          <hr style={{backgroundColor: '#1f0411', height: '1.5px', width: '95%', marginBottom: '0'}}/>
+
+          <h1 className="portfolio-title"> Shader Coding <span className="outline">GLSL Code</span> </h1>
+        </div>
+
+        {/* arduino portfolio */}
+        <div className="work-category arduino-prototyping">
+          <hr style={{backgroundColor: '#1f0411', height: '1.5px', width: '95%', marginBottom: '0'}}/>
+
+          <h1 className="portfolio-title"> Arduino & Prototypes </h1>
+         
+        </div>
+      </article>
+    </Layout>
   )
 }
 
 export default Works
+
+export const pageQuery = graphql`
+query {
+  site {
+    siteMetadata {
+      title
+    }
+  }
+  allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    nodes {
+      excerpt
+      fields {
+        slug
+      }
+      frontmatter {
+        date(formatString: "DD MMMM, YYYY")
+        title
+        description
+      }
+    }
+  }
+}
+`

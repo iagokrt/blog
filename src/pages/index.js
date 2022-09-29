@@ -3,14 +3,15 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 
-import Bio from "../components/bio/bio"
 import HomeActions from '../components/blog/HomeActions'
-import About from '../components/blog/About'
+import WebglCanvas from '../components/blog/WebglCanvas'
 import Technologies from '../components/bio/technologies'
 import Contact from '../components/bio/contact'
 import Newsletter from "../components/blog/Newsletter"
 import NewsTicker from '../components/blog/NewsTicker';
-import TooltipGuided from '../components/blog/TooltipGuided';
+import NavigationMenu from "../components/bio/navigator.menu"
+// import Bio from "../components/bio/bio"
+// import TooltipGuided from '../components/blog/TooltipGuided';
 
 import SEO from "../components/seo"
 
@@ -34,21 +35,13 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="@iagokrt" />
      
-
       <HomeActions />
-      
-      
-      <hr style={{backgroundColor: '#1f0411', height: '1.5px', width: '89%', marginBottom: '0'}}/>
-     
-
-      <About />
-
-      <NewsTicker />
-      <TooltipGuided />
 
       <Newsletter />
-      <Contact />
-      <Bio />
+
+      <NavigationMenu />
+      <NewsTicker />
+
       <Technologies />
      
     </Layout>
@@ -59,6 +52,8 @@ const BlogIndex = ({ data, location }) => {
         <span style={{fontSize: '2rem', marginBottom: '22px'}}>Welcome!</span> <br/>
       </h1>
        <hr style={{backgroundColor: '#1f0411', height: '2px', border: '1px solid #1f0411 '}}/>
+       <hr style={{backgroundColor: '#1f0411', height: '1.5px', width: '89%', marginBottom: '0'}}/>
+
  */
 export default BlogIndex
 
