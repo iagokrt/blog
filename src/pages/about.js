@@ -22,8 +22,8 @@ const About = ({data, location}) => {
       <SEO title="About" />
       <article>
         <h2>
-          <span>We 
-            <span className="outline"> write</span> 
+          <span>
+            We <span className="outline"> write</span> 
             <span className="outline-reverse"> code</span> and strive for
             <span className="outline-reverse"> building </span> 
             <span className="outline"> art. </span>
@@ -42,7 +42,7 @@ const About = ({data, location}) => {
         </h4>
       </article>
 
-      <div style={{display: 'flex', flexDirection: 'row-reverse', justifyContent: 'left'}}>
+      <div className="badges-container">
         <Contact />
         <TechnologiesTools />
       </div>

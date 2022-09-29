@@ -16,12 +16,12 @@ const Navigation = () => {
             </a>
           </li>
           <li>
-            <a href="https://github.com/iagokrt" className="icons second">
+            <a href="https://github.com/iagokrt" className="icons first">
               <span className="" title="github-profile">
                 <GithubIcon size={32} color="white" />
               </span>
               </a>
-            <a href="https://www.linkedin.com/in/iagobarreto/" className="icons third">
+            <a href="https://www.linkedin.com/in/iagobarreto/" className="icons second">
               <span className="" title="linkedin-profile">
                 <LinkedinIcon size={32} color="white" />
               </span>

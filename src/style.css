@@ -529,7 +529,13 @@ article.notfound {
 .contact-badge-link:hover {
   cursor: pointer;
 }
+.badges-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
 
+  padding-top: var(--spacing-8);
+}
 /* custom technologies badges */
 .tech-badges {
   display: flex;
@@ -752,9 +758,11 @@ html, body {
 }
 .navigation-topbar ul li a.first:hover {
   background-color: purple;
+  cursor: pointer;
 }
 .navigation-topbar ul li a.second:hover {
   background-color: blue;
+  cursor: pointer;
 }
 .labs-text {
   font-size: 32px;
