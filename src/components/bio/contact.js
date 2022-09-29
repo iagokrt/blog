@@ -6,15 +6,17 @@ import contact from '../../state/contact'
 const Contact = () => {
     return (
         <div className="contact-badge">
-            <h2>📫 Contact Info </h2>
+            <h2>
+                <span role="img" aria-label="mailbox emoji">📫</span> Contact Info
+            </h2>
             
             <div className="contact-badges">
                 {contact.map((item, index) => (
-                    <>
-                        <div key={index} className="">
-                            <img title={item.title} src={item.source} alt={item.alt} />
+                        <div key={index}>
+                            <a className="contact-badge-link" href={item.link} target="_blank" rel="noreferrer">
+                                <img title={item.title} src={item.source} alt={item.alt} />
+                            </a>
                         </div>
-                    </>
                     )
                 )}
             </div>

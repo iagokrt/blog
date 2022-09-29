@@ -1,8 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 
-import ellipse from '../../static/ellipse.png'
+// import ellipse from '../../static/ellipse.png'
 // import CustomCursor from '../components/CustomCursor'
+import footer from '../state/footer'
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -17,23 +18,26 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     header = (
-      <Link className="header-link-home logo" to="/">
-        &larr; {title}
-      </Link>
+      <div className="anim-wrapper">
+        <Link className="header-link-home logo anim fromright" to="/">
+          &larr; {title}
+        </Link>
+      </div>
     )
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath} style={{cursor: `url(${ellipse}), auto`}}>
+    <div className="global-wrapper" data-is-root-path={isRootPath} >
       <header className="global-header">
         {header} 
       </header>
       <main>
         {children}
       </main>
-      <footer>
-        <p> © {new Date().getFullYear()}, Love is what affects our movements.</p>
-        <a href="https://www.github.com/iagokrt"> &nbsp; iagokrt &nbsp;</a>
+      <footer className="footer" style={{fontSize: '0.8rem', marginTop: '2rem'}}>
+        <p style={{margin: '0 10px'}}>{footer.copyr}</p>
+        <span>{footer.title}</span>
+        <a href={footer.url} target="_blank" rel="noreferrer"> &nbsp;iago&nbsp;</a>
       </footer>
     </div>
   )

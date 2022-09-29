@@ -1,5 +1,5 @@
 import React from "react"
-import {FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon, FaBehanceSquare as BehanceIcon} from 'react-icons/fa'
+import { FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon, FaBehanceSquare as BehanceIcon } from 'react-icons/fa'
 
 const overlay = {position: 'absolute'}
 

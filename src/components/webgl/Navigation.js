@@ -1,5 +1,5 @@
 import React from "react"
-import {FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon, FaBehanceSquare as BehanceIcon} from 'react-icons/fa'
+import { FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon } from 'react-icons/fa'
 
 const overlay = {position: 'absolute', top: '500px'}
 
@@ -11,15 +11,21 @@ const Navigation = () => {
           <li key={`navigation item-${Math.random(5)}`}>
             <a href="/" className="typograph"><span className="logo" title="back to writings">Write Island</span></a>
             
-            <a href="/" className="typograph">
-              <span> - Laboratory v1 ⚗️</span>
-              <span className="" title="samples">Discover Experiments</span>
+            <a href="/blog" className="typograph">
+              <span>Laboratory v1.2 <span role="img" aria-label="experiments">⚗️</span></span>
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/iagobarreto/" className="icons first"><span className="" title="linkedin-profile"><LinkedinIcon size={32} color="white" /></span></a>
-            <a href="https://github.com/iagokrt" className="icons second"><span className="" title="github-profile"><GithubIcon size={32} color="white" /></span></a>
-            <a href="https://www.behance.net/iagokarneiro" className="icons third"><span className="" title="behance-profile"><BehanceIcon size={32} color="white" /></span></a>
+            <a href="https://github.com/iagokrt" className="icons first">
+              <span className="" title="github-profile">
+                <GithubIcon size={32} color="white" />
+              </span>
+              </a>
+            <a href="https://www.linkedin.com/in/iagobarreto/" className="icons second">
+              <span className="" title="linkedin-profile">
+                <LinkedinIcon size={32} color="white" />
+              </span>
+            </a>
           </li>
         </ul>
       </nav>

@@ -54,7 +54,7 @@ const Bio = () => {
       )}
       </aside>
       {author?.name && (
-          <p>
+          <p style={{fontSize: '1.5rem'}}>
             My name is <strong>{author.name}.</strong> {author?.summary || null}
             {` `}
           </p>

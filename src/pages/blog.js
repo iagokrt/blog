@@ -1,15 +1,15 @@
-import React, {useRef, useState, useEffect} from "react"
+import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio/bio"
 import Layout from "../components/layout"
 
-import Contact from '../components/bio/contact'
-import Technologies from '../components/bio/technologies'
-import HomeActions from '../components/blog/HomeActions'
-import Newsletter from "../components/blog/Newsletter"
-import About from '../components/blog/About'
+import HomeActions from "../components/blog/HomeActions"
 
+// import Technologies from '../components/bio/technologies'
+// import Newsletter from "../components/blog/Newsletter"
+import NewsTicker from '../components/blog/NewsTicker'
+import NavigationMenu from "../components/bio/navigator.menu"
 import SEO from "../components/seo"
 
 const Blog = ({ data, location }) => {
@@ -31,41 +31,44 @@ const Blog = ({ data, location }) => {
   }
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="technologies" />
-      <Bio />
+      <SEO title="Blog posts" />
       <div className="post-list-container">
-        {posts.map(post => {
+        {posts.map((post, index) => {
           const title = post.frontmatter.title || post.fields.slug
           return (
-            <article
-              key={post.fields.slug}
-              className={title ? "post-list-item background-modify-y" : "post-list-item"} 
-              itemScope
-              itemType="http://schema.org/Article"
-            >
-              <header>
-                <h2>
-                  <Link to={post.fields.slug} itemProp="url">
-                    <span itemProp="headline">{title}</span>
-                  </Link>
-                </h2>
-                <small>{post.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: post.frontmatter.description || post.excerpt,
-                  }}
-                  itemProp="description"
-                />
-              </section>
-            </article>
+            <Link key={index} to={post.fields.slug} itemProp="url">
+              <article
+                key={post.fields.slug}
+                className={title ? "post-list-item background-modify-y" : "post-list-item"} 
+                itemScope
+                itemType="http://schema.org/Article"
+              >
+                <header>
+                  <h2 className="heading">
+                    <p>
+                      <span itemProp="headline">{title}</span>
+                    </p>
+                  </h2>
+                  <small className="date">{post.frontmatter.date}</small>
+                </header>
+                <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: post.frontmatter.description || post.excerpt,
+                    }}
+                    itemProp="description"
+                  />
+                </section>
+              </article>
+            </Link>
           )
         })}
       </div>
-        <Contact />
-        <Newsletter />
-        <Technologies display={'flex'} />
+      
+      <br />
+      <HomeActions />
+      <NavigationMenu/>
+      <NewsTicker />
 
     </Layout>
   )
