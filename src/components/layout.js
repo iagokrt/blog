@@ -1,7 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 
-import ellipse from '../../static/ellipse.png'
+// import ellipse from '../../static/ellipse.png'
 // import CustomCursor from '../components/CustomCursor'
 import footer from '../state/footer'
 

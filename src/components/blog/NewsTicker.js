@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 // const tooltipText = 'Clique em alguma das opções de leitura abaixo!'
 

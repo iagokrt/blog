@@ -1,12 +1,12 @@
-import React, { useRef }  from "react"
+import React  from "react"
 // import { Link, graphql } from "gatsby"
 
 // import Layout from "../components/layout"
 // import SEO from "../components/seo"
 
-import {Canvas, useThree, useFrame} from '@react-three/fiber'
-import {OrbitControls, MeshWobbleMaterial, PerspectiveCamera, useCamera} from '@react-three/drei'
-import { PointsMaterial, FrontSide, Vector3 } from "three";
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+// import { PointsMaterial, FrontSide, Vector3 } from "three";
 // import * as dat from 'dat.gui';
 import Navigation from '../components/webgl/Navigation'
 // import vertex from '../shader/vertex.glsl';

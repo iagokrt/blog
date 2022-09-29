@@ -1,22 +1,20 @@
-import React, {useRef, useState, useEffect} from "react"
-import { Link, graphql } from "gatsby"
-
-import {FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon, FaBehanceSquare as BehanceIcon} from 'react-icons/fa'
+import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import projects from '../state/projects'
+// import projects from '../state/projects'
 
 import Contact from  '../components/bio/contact' 
-import Technologies from  '../components/bio/technologies'
+// import Technologies from  '../components/bio/technologies'
 import TechnologiesTools from  '../components/bio/technologies_tools'
 
-import Bio from '../components/bio/bio'
-import Navigation from '../components/blog/Navigation'
+// import Bio from '../components/bio/bio'
+// import Navigation from '../components/blog/Navigation'
 
 const About = ({data, location}) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  // const posts = data.allMarkdownRemark.nodes
   
   return (
     <>

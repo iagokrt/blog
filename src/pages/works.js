@@ -1,18 +1,16 @@
-import React, {useRef, useState, useEffect} from "react"
-import { Link, graphql } from "gatsby"
-
-import {FaLinkedinIn as LinkedinIcon, FaGithub as GithubIcon, FaTwitter as TwitterIcon} from 'react-icons/fa'
+import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import projects_webdev from '../state/projects_webdev'
-import projects_shaders from '../state/projects_webdev_shaders'
-import projects_visual_communication from '../state/projects_visual_communication'
-import projects_arduino from '../state/projects_arduino'
+// import projects_shaders from '../state/projects_webdev_shaders'
+// import projects_visual_communication from '../state/projects_visual_communication'
+// import projects_arduino from '../state/projects_arduino'
 
 const Works = ({data, location}) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  // const posts = data.allMarkdownRemark.nodes
 
   return (
     <Layout location={location} title={siteTitle}>

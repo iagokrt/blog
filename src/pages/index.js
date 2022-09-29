@@ -1,12 +1,12 @@
-import React, {useRef, useState, useEffect} from "react"
-import { Link, graphql } from "gatsby"
+import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 
 import HomeActions from '../components/blog/HomeActions'
-import WebglCanvas from '../components/blog/WebglCanvas'
+// import WebglCanvas from '../components/blog/WebglCanvas'
 import Technologies from '../components/bio/technologies'
-import Contact from '../components/bio/contact'
+// import Contact from '../components/bio/contact'
 import Newsletter from "../components/blog/Newsletter"
 import NewsTicker from '../components/blog/NewsTicker';
 import NavigationMenu from "../components/bio/navigator.menu"

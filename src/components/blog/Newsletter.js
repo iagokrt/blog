@@ -1,6 +1,5 @@
 import React from "react"
-import {AiTwotoneExperiment} from 'react-icons/fa'
-import {HiOutlineCollection} from 'react-icons/hi'
+
 const Newsletter = () => {
   return (
     <div className="newsletter-wrapper">

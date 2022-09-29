@@ -1,4 +1,4 @@
-import React, {useRef, useState, useEffect} from "react"
+import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio/bio"
@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 
 import Contact from '../components/bio/contact'
 import Technologies from '../components/bio/technologies'
-import Newsletter from "../components/blog/Newsletter"
+// import Newsletter from "../components/blog/Newsletter"
 
 import SEO from "../components/seo"
 
