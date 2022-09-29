@@ -6,8 +6,8 @@ import Layout from "../components/layout"
 
 import HomeActions from "../components/blog/HomeActions"
 
-import Technologies from '../components/bio/technologies'
-import Newsletter from "../components/blog/Newsletter"
+// import Technologies from '../components/bio/technologies'
+// import Newsletter from "../components/blog/Newsletter"
 import NewsTicker from '../components/blog/NewsTicker'
 import NavigationMenu from "../components/bio/navigator.menu"
 import SEO from "../components/seo"
