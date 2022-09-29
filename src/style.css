@@ -361,7 +361,7 @@ a {
   border-radius: 50px;
   padding: 67px 35px;
   margin-top: var(--spacing-20);
-  max-width: 700px;
+  /* max-width: 700px; */
   transition: all 0.2s linear;
 }
 .post-list-item:hover {
@@ -436,6 +436,7 @@ a {
   justify-content: center;
   margin-bottom: var(--spacing-4);
   margin-top: var(--spacing-4);
+  margin-right: 50px;
   padding: var(--spacing-4);
 }
 
@@ -1121,14 +1122,13 @@ aside.buttons a.labs-ref {
 .anim {
   height: auto;
   color: #7a1c4b;
-  opacity   : 0.8;
 }
 .anim:after {
-  display      : block;
-  content      : '';
+  display: block;
+  content: '';
   border-bottom: solid 5px #fff;
-  transform    : scaleX(0);
-  transition   : transform 300ms ease-in-out;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
 }
 .anim:hover:after {
   transform: scaleX(1);

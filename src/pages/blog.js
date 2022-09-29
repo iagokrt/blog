@@ -4,10 +4,12 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio/bio"
 import Layout from "../components/layout"
 
-import Contact from '../components/bio/contact'
-import Technologies from '../components/bio/technologies'
-// import Newsletter from "../components/blog/Newsletter"
+import HomeActions from "../components/blog/HomeActions"
 
+import Technologies from '../components/bio/technologies'
+import Newsletter from "../components/blog/Newsletter"
+import NewsTicker from '../components/blog/NewsTicker'
+import NavigationMenu from "../components/bio/navigator.menu"
 import SEO from "../components/seo"
 
 const Blog = ({ data, location }) => {
@@ -29,8 +31,7 @@ const Blog = ({ data, location }) => {
   }
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="technologies" />
-      <Bio />
+      <SEO title="Blog posts" />
       <div className="post-list-container">
         {posts.map((post, index) => {
           const title = post.frontmatter.title || post.fields.slug
@@ -63,8 +64,11 @@ const Blog = ({ data, location }) => {
           )
         })}
       </div>
-        <Contact />
-        <Technologies display={'flex'} />
+      
+      <br />
+      <HomeActions />
+      <NavigationMenu/>
+      <NewsTicker />
 
     </Layout>
   )

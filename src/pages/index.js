@@ -8,10 +8,9 @@ import HomeActions from '../components/blog/HomeActions'
 import Technologies from '../components/bio/technologies'
 // import Contact from '../components/bio/contact'
 import Newsletter from "../components/blog/Newsletter"
-import NewsTicker from '../components/blog/NewsTicker';
+import NewsTicker from '../components/blog/NewsTicker'
 import NavigationMenu from "../components/bio/navigator.menu"
 // import Bio from "../components/bio/bio"
-// import TooltipGuided from '../components/blog/TooltipGuided';
 
 import SEO from "../components/seo"
 
