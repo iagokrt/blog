@@ -526,6 +526,10 @@ article.notfound {
   }
 }
 
+.contact-badge-link:hover {
+  cursor: pointer;
+}
+
 /* custom technologies badges */
 .tech-badges {
   display: flex;

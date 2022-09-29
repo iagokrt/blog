@@ -7,11 +7,9 @@ const Technologies = ({display}) => {
    return (
         <aside style={{display: display, justifyContent: 'center'}} className="tech-badges">
             {technologies.map((tech, index) => (
-                <>
-                    <div key={index} className="icon-container">
-                        <img align="center" title={tech.title} width="40px" src={tech.source} alt={tech.alt} />
-                    </div>
-                </>
+                <div key={index} className="icon-container">
+                    <img align="center" title={tech.title} width="40px" src={tech.source} alt={tech.alt} />
+                </div>
                 )
             )}
         </aside>

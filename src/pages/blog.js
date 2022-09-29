@@ -32,10 +32,10 @@ const Blog = ({ data, location }) => {
       <SEO title="technologies" />
       <Bio />
       <div className="post-list-container">
-        {posts.map(post => {
+        {posts.map((post, index) => {
           const title = post.frontmatter.title || post.fields.slug
           return (
-            <Link to={post.fields.slug} itemProp="url">
+            <Link key={index} to={post.fields.slug} itemProp="url">
               <article
                 key={post.fields.slug}
                 className={title ? "post-list-item background-modify-y" : "post-list-item"} 
@@ -44,9 +44,9 @@ const Blog = ({ data, location }) => {
               >
                 <header>
                   <h2 className="heading">
-                    <h4>
+                    <p>
                       <span itemProp="headline">{title}</span>
-                    </h4>
+                    </p>
                   </h2>
                   <small className="date">{post.frontmatter.date}</small>
                 </header>
