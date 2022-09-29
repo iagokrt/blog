@@ -1,3 +1,5 @@
+import ThreeBadge from '../../content/assets/three-js-ico.png';
+
 const technologies = [
     {
         title: 'HTML5',
@@ -31,7 +33,7 @@ const technologies = [
     },
     {
         title: 'THREEJS',
-        source: 'http://ingenuitysoftwarelabs.com/wp-content/uploads/2022/08/three-js-logo.png',
+        source: ThreeBadge,
         alt: 'THREEJS'
     }
 ]
