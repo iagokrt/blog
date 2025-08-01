@@ -522,7 +522,7 @@ article.notfound {
 
 /* fix small sizes on the cta navigatormenu buttons component */
 @media (max-width: 915px) {
-  .navigator-menu {
+  aside.navigator-menu {
     flex-wrap: wrap;
   }
 }
@@ -633,6 +633,8 @@ html, body {
 }
 .home-button:hover {
   cursor: pointer;
+  border: 1px solid #fff;
+  transition: all 0.07s ease-in-out;
 }
 
 .buttons a {
@@ -1174,6 +1176,12 @@ aside.buttons a.labs-ref {
   .news-ticker-container .blog-news {
     padding: 2px;
   }
+  .main {
+    width: calc(100% - 30px);
+  }
+}
+@media only screen and (max-width: 855px) {
+
   .main {
     width: calc(100% - 30px);
   }
