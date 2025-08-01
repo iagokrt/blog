@@ -8,13 +8,13 @@ const NavigationMenu = () => {
             <a className="home-button blog-ref" title="Read Blog" href="/blog">
                 <span className="outline-reverse">Blog</span>
             </a>
-            <a className="home-button projects-ref" title="Projects" href="/works">
+            {/* <a className="home-button projects-ref" title="Projects" href="/works">
                 <span className="outline-reverse">Projects</span>
-            </a>
+            </a> */}
             <a className="home-button contact-ref" title="Professional Contact" href="/about">
                 <span className="outline-background">About</span>
             </a>
-            <a className="home-button labs-ref" title="beta--webgl-experiments" href="/labs">
+            <a className="home-button labs-ref" title="webgl-exp-beta" href="/labs">
                 <span className="outline-reverse">WebGL</span>
             </a>
         </aside>

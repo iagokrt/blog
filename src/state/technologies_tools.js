@@ -136,7 +136,17 @@ const technologies_tools = [
         title: 'THREEJS',
         source: ThreeBadge,
         alt: 'THREEJS'
-    }
+    },
+    {
+        title: 'PHP',
+        source: "https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white",
+        alt: 'PHP'
+    },
+    {
+        title: 'ANGULAR',
+        source: 'https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white"',
+        alt: 'ANGULAR'
+    },
 ]
 
 export default technologies_tools;

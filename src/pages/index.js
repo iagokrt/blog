@@ -34,12 +34,12 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Blog" />
      
-      <HomeActions />
+      {/* <HomeActions /> */}
 
-      <Newsletter />
+      {/* <Newsletter /> */}
 
       <NavigationMenu />
-      <NewsTicker />
+      {/* <NewsTicker /> */}
 
       <Technologies />
      
