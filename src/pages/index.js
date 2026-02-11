@@ -36,12 +36,13 @@ const BlogIndex = ({ data, location }) => {
      
       {/* <HomeActions /> */}
 
-      {/* <Newsletter /> */}
 
       <NavigationMenu />
-      {/* <NewsTicker /> */}
+      <NewsTicker />
 
       <Technologies />
+      <Newsletter />
+
      
     </Layout>
   )

@@ -30,12 +30,12 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 630,
-            },
-          },
+          // {
+          //   resolve: `gatsby-remark-images`,
+          //   options: {
+          //     maxWidth: 630,
+          //   },
+          // },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
@@ -48,8 +48,8 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    // `gatsby-transformer-sharp`,
+    // `gatsby-plugin-sharp`,
     `gatsby-plugin-glslify`,
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -67,7 +67,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#123444`,
         display: `minimal-ui`,
-        icon: `content/assets/krt-icon.png`,
+        // icon: `content/assets/krt-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
